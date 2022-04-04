@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
+  name: string = "";
+  date: string = "";
+
+  onNameChange(target: EventTarget) {
+    this.name = (<HTMLInputElement>target).value;
+  }
+
+  onDateChange(target: EventTarget) {
+    this.date = (<HTMLInputElement>target).value;
+  }
 }
